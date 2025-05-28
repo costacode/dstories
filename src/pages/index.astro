@@ -1,24 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from "../components/Hero.astro";
 const title = 'Designing Stories';
 ---
 
 <Layout>
-	<h1>Hello</h1>
+	<h1 class="visually-hidden">Designing Stories</h1>
+
 	<div class="coreContainer animateBG flexi animate">
 		<main class="main grid-core">
-			<nav class="nav-top">
-				<!-- Navigation content goes here -->
-			</nav>
-			<section class="hero slide">
-				<div class="hero-dslogo">
-					<!-- SVG logo goes here -->
-				</div>
-				<header>
-					 <h1 class="visually-hidden">{title}</h1>
-					<p class="hero-intro bounceText">{title}</p>
-				</header>
-			</section>
+			<Hero />
 			<div class="arrow">
 				<!-- Arrow icon or button for navigation -->
 			</div>

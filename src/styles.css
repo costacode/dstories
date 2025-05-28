@@ -2,41 +2,44 @@
 	font-family: "Open Sans";
 	font-style: normal;
 	font-weight: 400;
-    font-display: swap;
-	src: local("Open Sans Regular"), local("OpenSans-Regular"),
+	font-display: swap;
+	src:
+		local("Open Sans Regular"),
+		local("OpenSans-Regular"),
 		url("/fonts/open-sans-v17-latin-regular.woff2") format("woff2"),
-		/* Super Modern Browsers */
-			url("/fonts/open-sans-v17-latin-regular.woff") format("woff"); /* Modern Browsers */
+		/* Super Modern Browsers */ url("/fonts/open-sans-v17-latin-regular.woff") format("woff"); /* Modern Browsers */
 }
 
 @font-face {
 	font-family: "Open Sans";
 	font-style: normal;
 	font-weight: 700;
-    font-display: swap;
-	src: local("Open Sans Bold"), local("OpenSans-Bold"),
+	font-display: swap;
+	src:
+		local("Open Sans Bold"),
+		local("OpenSans-Bold"),
 		url("/fonts/open-sans-v17-latin-700.woff2") format("woff2"),
-		/* Super Modern Browsers */
-			url("/fonts/open-sans-v17-latin-700.woff") format("woff"); /* Modern Browsers */
+		/* Super Modern Browsers */ url("/fonts/open-sans-v17-latin-700.woff") format("woff"); /* Modern Browsers */
 }
 
 :root {
-    --clr-neutral-400:hsl(252, 2%, 41%);
-    --clr-neutral-900:hsl(238, 92%, 5%);
+	--clr-neutral-400: hsl(252, 2%, 41%);
+	--clr-neutral-900: hsl(238, 92%, 5%);
 
-    --clr-green-400:hsl(68, 70%, 55%); 
-    --clr-blue-400:hsl(200, 64%, 85%);
-    --clr-blue-700:hsl(200, 63%, 47%);
-    --clr-black-800:hsl(180, 14%, 1%);
+	--clr-green-400: hsl(68, 70%, 55%);
+	--clr-blue-400: hsl(200, 64%, 85%);
+	--clr-blue-700: hsl(200, 63%, 47%);
+	--clr-black-800: hsl(180, 14%, 1%);
 
-    --clr-body: var(--clr-neutral-400);
-    --clr-heading: var(--clr-neutral-900);
-    --clr-accent-400: var(--clr-green-400);
+	--clr-body: var(--clr-neutral-400);
+	--clr-heading: var(--clr-neutral-900);
+	--clr-accent-400: var(--clr-green-400);
 
-    --ff-base: "Open Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --ff-regular: 400;
-    --ff-semi-bold: 700;
-    --ff-bold: 900;
+	--ff-base: "Open Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	--ff-regular: 400;
+	--ff-semi-bold: 700;
+	--ff-bold: 900;
+
 }
 
 /* Reset 
@@ -44,111 +47,208 @@ https://piccalil.li/blog/a-more-modern-css-reset/
 */
 
 html {
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-  }
-
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Prevent font size inflation */
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  margin-block-end: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin-block-end: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  line-height: 1.6;
-  margin: 0;
+	min-height: 100vh;
+	line-height: 1.6;
+	margin: 0;
 }
 
 /* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-    color: var(--clr-heading);
-    font-weight: var(--ff-bold);
-    text-wrap: balance;
+h1,
+h2,
+h3,
+h4 {
+	color: var(--clr-heading);
+	font-weight: var(--ff-bold);
+	text-wrap: balance;
 }
 
-p, li {
-    text-wrap: pretty;
-    max-width: 65ch;
+p,
+li {
+	text-wrap: pretty;
+	max-width: 65ch;
 }
-
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
+	text-decoration-skip-ink: auto;
+	color: currentColor;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
-  font-family: inherit;
-  font-size: inherit;
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
 }
 
 /* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) {
-  min-height: 10em;
+	min-height: 10em;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
-  scroll-margin-block: 5ex;
+	scroll-margin-block: 5ex;
 }
 /* end reset ^ */
 
 body {
-    color: var(--clr-body);
-    font-family: var(--ff-base);
-    font-weight: var(--ff-regular);
-    background-color: var(--clr-green-400);
+	color: var(--clr-body);
+	font-family: var(--ff-base);
+	font-weight: var(--ff-regular);
+	background-color: var(--clr-green-400);
 }
 
 .visually-hidden {
-    clip: rect(0, 0, 0, 0);
-    clip-path: inset(50%);
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
 }
+
+/* Hero */
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	z-index: 1;
+
+	@media (min-width: 960px) {
+		width: auto;
+		/* transform: translate3d(16%, 0, 0); */
+	}
+
+	&.sliding {
+		justify-content: flex-start;
+		@media (min-width: 1024px) {
+			justify-content: center;
+			transform: translate3d(600px, 0, 0);
+		}
+	}
+
+
+}
+
+.hero-dslogo {
+	display: block;
+	width: 160px;
+
+	@media (min-width: 960px) {
+		width: 260px;
+	}
+
+	&.resize {
+		width: 100px;
+		margin: 1rem 2rem 0 0;
+
+		@media (min-width: 960px) {
+			margin: 2rem 2rem 0 0;
+			width: 120px;
+		}
+
+		@media (min-width: 1024px) {
+			width: 160px;
+		}
+
+	}
+}
+
+.hero-intro {
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	max-width: 400px;
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: normal;
+	text-align: center;
+
+	@media (min-width: 960px) {
+		padding: 1rem 0;
+		max-width: 38rem;
+	}
+
+	&.hidden {
+		opacity: 0;
+		height: 0;
+		width: 0;
+	}
+}
+
+/* // hide text until typescript font is present */
+/* .wf-loading .branding-intro {
+	font-family: "facitweb", tahoma, sans-serif;
+	visibility: hidden;
+}
+.wf-active .branding-intro {
+	visibility: visible;
+} */
