@@ -172,6 +172,81 @@ body {
 	white-space: nowrap;
 }
 
+
+/* GLOBALS */
+html {
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: #c3d9e6;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 16px;
+	font-size: 1.6rem;
+	color: #282828;
+	line-height: 1.703;
+	margin: 0;
+	&.page {
+		p {
+			@media only screen and (min-width: 1024px) {
+				font-size: 18px;
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+ul,
+ol {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	list-style: none;
+}
+
+a {
+	color: #2c91c3;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #2c91c3;
+}
+
+a:hover {
+	color: #011b35;
+}
+
+a:focus {
+	outline: 0;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.print-only {
+	display: none;
+}
+
+
+
+
 /* Hero */
 .hero {
 	display: flex;
@@ -252,6 +327,65 @@ body {
 .wf-active .branding-intro {
 	visibility: visible;
 } */
+
+/* GRID */
+
+.grid-core {
+	display: grid;
+	grid-template-columns: auto;
+	height: 100vh;
+
+	@media (min-width: 600px) {
+		justify-content: center;
+	}
+	@media (min-width: 960px) {
+		grid-template-columns: 18vw 21vw 30vw 6vw 21vw 30vw;
+	}
+
+	.hero {
+		grid-column: 2/5;
+		grid-row: 1/2;
+
+		@media (min-width: 480px) {
+			grid-column: 1/6;
+		}
+
+		@media (min-width: 760px) {
+			grid-column: 3/5;
+		}
+
+		&.sliding {
+			grid-column: 5/6;
+		}
+	}
+
+	.arrow {
+		display: none;
+
+		@media (min-width: 960px) {
+			display: block;
+			grid-column: 4/6;
+			grid-row: 1/2;
+		}
+	}
+
+	.bio {
+		grid-column: 2/6;
+		grid-row: 1/2;
+	}
+
+	.stories {
+		grid-column: 2/6;
+		grid-row: 1/2;
+	}
+}
+
+.flexi {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 
 /* ANIMATION */
 
@@ -472,7 +606,7 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	right: -60%;
+	right: -40%;
 	bottom: 0;
 	background-size: cover;
 	background-position: center center;
@@ -529,6 +663,17 @@ body {
 		padding: 2rem;
 		max-width: 168px;
 		line-height: 1.4;
+	}
+	
+	ul {
+		position: relative;
+		top: 10%;
+		padding: 2rem;
+		width: 168px;
+
+		a {
+			color: white;
+		}
 	}
 }
 
