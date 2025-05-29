@@ -385,6 +385,10 @@ a:active {
 	align-items: center;
 }
 
+.blur-bg {
+	backdrop-filter: blur(20px);
+}
+
 
 /* ANIMATION */
 
@@ -572,6 +576,44 @@ a:active {
 			transform: translate3d(0, 0, 0);
 		}
 	}
+
+	.blur-bg {
+		animation-name: blurIn;
+		animation-duration: 5s;
+		animation-fill-mode: forwards;
+	}
+
+
+	@keyframes blurIn {
+		from {
+			backdrop-filter: blur(30px);
+		}
+		5% {
+			backdrop-filter: blur(28px);
+		}
+		15% {
+			backdrop-filter: blur(24px);
+		}
+		30% {
+			backdrop-filter: blur(20px);
+		}
+		45% {
+			backdrop-filter: blur(16px);
+		}
+		60% {
+			backdrop-filter: blur(10px);
+		}
+		75% {
+			backdrop-filter: blur(8px);
+		}
+		90% {
+			backdrop-filter: blur(4px);
+		}
+		to {
+			backdrop-filter: blur(0px);
+		}
+
+	}	
 }
 
 
