@@ -244,12 +244,11 @@ a:active {
 /* Hero */
 .hero {
 	display: flex;
-	/* flex-direction: column; */
 	align-items: center;
 	justify-content: center;
-	gap: 4rem;
+	gap: 6rem;
 	height: 100vh;
-	z-index: 1;
+	z-index: 200;
 	position: relative;
 	top: -6rem;
 	left: -12rem;
@@ -275,7 +274,7 @@ a:active {
 	width: 160px;
 
 	@media (min-width: 960px) {
-		width: 360px;
+		width: 420px;
 	}
 
 	&.resize {
@@ -295,19 +294,21 @@ a:active {
 }
 
 .hero-intro {
+	background: rgba(199, 221, 60, 1);
+	border-radius: 1rem 8rem 8rem 8rem;
+	border: 2px solid hsl(88, 92%, 24%);
 	margin-top: 0;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 10px;
 	max-width: 400px;
-	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: 2.4rem;
 	font-weight: normal;
 	text-align: center;
 
 	@media (min-width: 960px) {
-		padding: 1rem 0;
-		max-width: 38rem;
+		padding: 2rem 4rem 2rem 4rem;
+		width: 32rem;
 	}
 
 	&.hidden {
@@ -489,16 +490,16 @@ a:active {
 	@media (min-width: 960px) {
 		@keyframes logosize {
 			from {
-				transform: scale(2);
+				transform: scale(3);
 			}
 			80% {
-				transform: scale(2);
+				transform: scale(3);
 			}
 			90% {
-				transform: scale(1);
+				transform: scale(1.4);
 			}
 			to {
-				transform: scale(1);
+				transform: scale(1.4);
 			}
 		}
 	}
@@ -685,9 +686,9 @@ a:active {
 
 
 #lottie-container {
-  width: 1100px;
-  height: 1400px;
+  width: 1360px;
+  height: auto;
   position: absolute;
   top: -4rem;
-  right: -80rem;
+  right: -8rem;
 }
