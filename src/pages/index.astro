@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from "../components/Hero.astro";
-import Arrow from "../components/Arrow.astro";
+// import Arrow from "../components/Arrow.astro";
 const title = 'Designing Stories';
 ---
 
@@ -11,7 +11,9 @@ const title = 'Designing Stories';
 	<div class="coreContainer animateBG flexi animate">
 		<main class="main grid-core">
 			<Hero />
-			<Arrow />
+			<!-- Arrow is a menu needed only on internal pages, so it is commented out here. -->
+			<!-- <Arrow /> -->
 		</main>
+		<div class='js-lottie lottie-container' id='lottie-container'></div>
 	</div>
 </Layout>

@@ -10,7 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.8.0"
+    "astro": "^5.8.0",
+    "lottie-web": "^5.13.0"
   },
   "devDependencies": {
     "node-html-parser": "^7.0.1",

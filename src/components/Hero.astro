@@ -9,6 +9,24 @@ const title = 'Designing Stories';
     </div>
     <header>
         <h1 class="visually-hidden">{title}</h1>
-        <p class="hero-intro bounceText">Web design studio run by <a href="#" id="link-about" class="link-about">Jesus Acosta</a>, creative front-end developer</p>
+        <p class="hero-intro bounceText">Web design studio<br /> run by <a href="#" id="link-about" class="link-about">Jesus Acosta</a>,<br/> creative<br/> front-end developer</p>
     </header>
+    <div class='js-lottie lottie-container' id='lottie-container'></div>
 </section>
+
+    <script>
+		import lottie from "lottie-web";
+        fetch('/images/tree.json')
+            .then(res => res.json())
+            .then(tree => {
+            setTimeout(() => {
+                lottie.loadAnimation({
+                    container: document.getElementById('lottie-container'),
+                    renderer: "svg",
+                    loop: false,
+                    autoplay: true,
+                    animationData: tree,
+                });
+            }, 3000); // Delay in milliseconds (1000ms = 1s)
+            });
+    </script>
