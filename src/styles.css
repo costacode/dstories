@@ -88,12 +88,6 @@ ol[role="list"] {
 	padding: 0;
 }
 
-/* Set core body defaults */
-body {
-	min-height: 100vh;
-	line-height: 1.6;
-	margin: 0;
-}
 
 /* Set shorter line heights on headings and interactive elements */
 h1,
@@ -155,43 +149,27 @@ textarea:not([rows]) {
 }
 /* end reset ^ */
 
-body {
-	color: var(--clr-body);
-	font-family: var(--ff-base);
-	font-weight: var(--ff-regular);
+
+/* GLOBALS */
+
+html {
 	background-color: var(--clr-green-400);
 }
 
-.visually-hidden {
-	clip: rect(0, 0, 0, 0);
-	clip-path: inset(50%);
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-}
-
-
-/* GLOBALS */
-html {
-	-webkit-overflow-scrolling: touch;
-	-webkit-tap-highlight-color: #c3d9e6;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-}
-
-html,
 body {
 	height: 100%;
+	min-height: 100vh;
+	line-height: 1.6;
+	margin: 0;
+	color: var(--clr-body);
+	font-family: var(--ff-base);
+	font-weight: var(--ff-regular);
+	background: url('/images/flowers3.png');
+    background-size: contain;
+    background-repeat: repeat-x;
+	background-position-y: bottom;
 	overflow: hidden;
-}
 
-html {
-	font-size: 62.5%;
-}
-
-body {
 	font-size: 16px;
 	font-size: 1.6rem;
 	color: #282828;
@@ -205,7 +183,33 @@ body {
 			}
 		}
 	}
+
 }
+
+
+
+.visually-hidden {
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+}
+
+
+html {
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: #c3d9e6;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
 
 ul,
 ol {
