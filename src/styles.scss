@@ -186,7 +186,7 @@ body {
 
 	&.page {
 		p {
-			@media only screen and (min-width: 1024px) {
+			@media only screen and (min-width: $width-large) {
 				font-size: 18px;
 				font-size: 1.8rem;
 			}
@@ -265,7 +265,7 @@ a:active {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 1rem;
+	gap: 0;
 	height: 100vh;
 	z-index: 200;
 	position: relative;
@@ -273,7 +273,7 @@ a:active {
 
 	@media (min-width: $width-large) {
 		flex-direction: row;
-		gap: 6rem;
+		gap: 4rem;
 		left: -12rem;
 		width: auto;
 		transform: translate3d(16%, 0, 0);
@@ -294,8 +294,12 @@ a:active {
 	display: block;
 	width: 220px;
 
+	@media (min-width: $width-large) {
+		width: 260px;
+	}
+
 	@media (min-width: $width-xxlarge) {
-		width: 420px;
+		width: 320px;
 	}
 
 	&.resize {
@@ -359,7 +363,7 @@ a:active {
 	grid-template-columns: auto;
 	height: 100vh;
 
-	@media (min-width: 600px) {
+	@media (min-width: $width-small) {
 		justify-content: center;
 	}
 
@@ -513,7 +517,7 @@ a:active {
 		animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 	}
 
-	@media (min-width: 960px) {
+	@media (min-width: $width-medium2) {
 		@keyframes logosize {
 			from {
 				transform: scale(3);
@@ -536,7 +540,7 @@ a:active {
 		animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
 	}
 
-	@media (min-width: 960px) {
+	@media (min-width: $width-medium2) {
 		@keyframes movehero {
 			from {
 				transform: translate3d(16%, 0, 0);
