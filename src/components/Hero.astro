@@ -17,10 +17,9 @@ const title = 'Designing Stories';
 
     <script>
 		import lottie from "lottie-web";
-        fetch('/images/tree.json')
+        fetch('/images/talltree.json')
             .then(res => res.json())
             .then(tree => {
-            setTimeout(() => {
                 lottie.loadAnimation({
                     container: document.getElementById('lottie-container'),
                     renderer: "svg",
@@ -28,6 +27,5 @@ const title = 'Designing Stories';
                     autoplay: true,
                     animationData: tree,
                 });
-            }, 3000); // Delay in milliseconds (1000ms = 1s)
             });
     </script>

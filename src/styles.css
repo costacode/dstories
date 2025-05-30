@@ -305,7 +305,6 @@ a:active {
 }
 
 .hero-intro {
-	background: rgba(199, 221, 60, 1);
 	border-radius: 1rem 8rem 8rem 8rem;
 	margin-top: 0;
 	margin-left: auto;
@@ -317,6 +316,7 @@ a:active {
 	text-align: center;
 
 	@media (min-width: 960px) {
+		background: hsl(48, 29%, 97%);
 		border: 2px solid hsl(88, 92%, 24%);
 		padding: 2rem 4rem 2rem 4rem;
 		width: 32rem;
@@ -620,7 +620,20 @@ a:active {
 			backdrop-filter: blur(0px);
 		}
 
-	}	
+	}
+
+	body {
+		animation: bgMove 5s linear;
+	}
+
+	@keyframes bgMove {
+		from { 
+			background-position-y: 30rem;
+		}
+		to {
+			background-position-y: bottom;
+		}
+	}
 }
 
 
@@ -736,10 +749,10 @@ a:active {
 
 .lottie-container {
 	display: none;
-	width: 1360px;
+	width: 1280px;
 	height: auto;
 	position: absolute;
-	top: -4rem;
+	top: -62rem;
 	right: -8rem;
 
   @media (min-width: 1024px) {
