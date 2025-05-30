@@ -39,8 +39,19 @@
 	--ff-regular: 400;
 	--ff-semi-bold: 700;
 	--ff-bold: 900;
-
 }
+
+// media queries in sass to make them DRY, media queries don't work with CSS root variables
+$width-small: 480px;
+$width-medium: 768px;
+$width-medium2: 960px;
+$width-large: 1280px;
+$width-xlarge: 1440px;
+$width-xxlarge: 1920px;
+$width-xxlarge2: 2560px;
+$width-xxlarge3: 3840px;
+$width-xxlarge4: 5120px;
+$width-xxlarge5: 7680px;
 
 /* Reset 
 https://piccalil.li/blog/a-more-modern-css-reset/
@@ -162,31 +173,15 @@ html {
 }
 
 body {
+	color: var(--clr-body);
+	font-family: var(--ff-base);
+	font-weight: var(--ff-regular);
+	font-size: 1.6rem;
 	height: 100%;
 	min-height: 100vh;
 	line-height: 1.6;
 	margin: 0;
-	color: var(--clr-body);
-	font-family: var(--ff-base);
-	font-weight: var(--ff-regular);
-	background-image: url('/images/flowers-s.png');
-    background-size: 70%;
-    background-repeat: repeat-x;
-	background-position-y: bottom;
 	overflow: hidden;
-
-	font-size: 16px;
-	font-size: 1.6rem;
-	color: #282828;
-	line-height: 1.703;
-	margin: 0;
-
-	@media (min-width: 960px) {
-		background-image: url('/images/flowers3.png');
-		background-size: contain;
-		background-repeat: repeat-x;
-		background-position-y: bottom;
-	}
 
 	&.page {
 		p {
@@ -197,6 +192,20 @@ body {
 		}
 	}
 
+}
+
+.image-bg {
+	background-image: url('/images/flowers-s.png');
+    background-size: 70%;
+    background-repeat: repeat-x;
+	background-position-y: bottom;
+
+	@media (min-width: $width-medium) {
+		background-image: url('/images/flowers3.png');
+		background-size: contain;
+		background-repeat: repeat-x;
+		background-position-y: bottom;
+	}
 }
 
 .visually-hidden {
@@ -585,6 +594,7 @@ a:active {
 	}
 
 	.blur-bg {
+		// background: rgba(255,255,255,0.5);
 		animation-name: blurIn;
 		animation-duration: 5s;
 		animation-fill-mode: forwards;
@@ -622,7 +632,7 @@ a:active {
 
 	}
 
-	body {
+	.image-bg {
 		animation: bgMove 5s linear;
 	}
 
@@ -753,7 +763,7 @@ a:active {
 	height: auto;
 	position: absolute;
 	top: -62rem;
-	right: -8rem;
+	right: 0;
 
   @media (min-width: 1024px) {
 	display: block;
