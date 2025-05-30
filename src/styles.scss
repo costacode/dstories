@@ -45,13 +45,14 @@
 $width-small: 480px;
 $width-medium: 768px;
 $width-medium2: 960px;
-$width-large: 1280px;
-$width-xlarge: 1440px;
-$width-xxlarge: 1920px;
-$width-xxlarge2: 2560px;
-$width-xxlarge3: 3840px;
-$width-xxlarge4: 5120px;
-$width-xxlarge5: 7680px;
+$width-large: 1440px;
+$width-xlarge: 1280px;
+$width-xxlarge: 1700px;
+$width-xxlarge2: 1920px;
+$width-xxlarge3: 2560px;
+$width-xxlarge4: 3840px;
+$width-xxlarge5: 5120px;
+$width-xxlarge6: 7680px;
 
 /* Reset 
 https://piccalil.li/blog/a-more-modern-css-reset/
@@ -270,7 +271,7 @@ a:active {
 	position: relative;
 	top: -6rem;
 
-	@media (min-width: 960px) {
+	@media (min-width: $width-large) {
 		flex-direction: row;
 		gap: 6rem;
 		left: -12rem;
@@ -293,7 +294,7 @@ a:active {
 	display: block;
 	width: 220px;
 
-	@media (min-width: 960px) {
+	@media (min-width: $width-xxlarge) {
 		width: 420px;
 	}
 
@@ -324,10 +325,14 @@ a:active {
 	font-weight: normal;
 	text-align: center;
 
-	@media (min-width: 960px) {
+	@media (min-width: $width-large) {
 		background: hsl(48, 29%, 97%);
 		border: 2px solid hsl(88, 92%, 24%);
 		padding: 2rem 4rem 2rem 4rem;
+		width: 18rem;
+	}
+
+	@media (min-width: $width-xlarge) {
 		width: 32rem;
 	}
 
@@ -357,7 +362,8 @@ a:active {
 	@media (min-width: 600px) {
 		justify-content: center;
 	}
-	@media (min-width: 960px) {
+
+	@media (min-width: $width-xxlarge) {
 		grid-template-columns: 18vw 21vw 30vw 6vw 21vw 30vw;
 	}
 
@@ -408,7 +414,7 @@ a:active {
 
 /* ANIMATION */
 
-@media (min-width: 960px) {
+@media (min-width: $width-large) {
 	/* animate letters */
 
 	.animate .hero-dslogo .path {
@@ -631,14 +637,16 @@ a:active {
 		}
 
 	}
+}
 
+@media (min-width: $width-medium2) {
 	.image-bg {
 		animation: bgMove 5s linear;
 	}
 
 	@keyframes bgMove {
 		from { 
-			background-position-y: 30rem;
+			background-position-y: 90rem;
 		}
 		to {
 			background-position-y: bottom;
@@ -765,7 +773,7 @@ a:active {
 	top: -62rem;
 	right: 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $width-large) {
 	display: block;
   }
 }
