@@ -274,9 +274,9 @@ a:active {
 	@media (min-width: $width-large) {
 		flex-direction: row;
 		gap: 4rem;
-		left: -12rem;
+		// left: 6rem;
 		width: auto;
-		transform: translate3d(16%, 0, 0);
+		transform: translate3d(24%, 0, 0);
 	}
 
 	// &.sliding {
@@ -366,7 +366,7 @@ a:active {
 	}
 
 	@media (min-width: $width-xxlarge) {
-		grid-template-columns: 18vw 21vw 30vw 6vw 21vw 30vw;
+		// grid-template-columns: 18vw 21vw 30vw 6vw 21vw 30vw;
 	}
 
 	.hero {
@@ -533,25 +533,41 @@ a:active {
 	}
 
 	/* animate hero */
-	.animate .slide {
-		animation: movehero 0.6s linear forwards;
-		animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+	// .animate .slide {
+	// 	animation: movehero 0.6s linear forwards;
+	// 	animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+	// }
+
+	// @media (min-width: $width-medium2) {
+	// 	@keyframes movehero {
+	// 		from {
+	// 			transform: translate3d(16%, 0, 0);
+	// 		}
+	// 		to {
+	// 			transform: translate3d(3%, 0, 0);
+	// 		}
+	// 	}
+	// }
+
+	/* animate hero slide in */
+	.hero.slide-in {
+		animation: hero-slide-in 1.2s cubic-bezier(0.5, 0, 0.5, 1.2) forwards;
 	}
 
-	@media (min-width: $width-medium2) {
-		@keyframes movehero {
-			from {
-				transform: translate3d(16%, 0, 0);
-			}
-			to {
-				transform: translate3d(3%, 0, 0);
-			}
-		}
+
+	@keyframes hero-slide-in {
+	from {
+		transform: translate3d(24%, 0, 0);
 	}
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+	}
+
 
 	/* animate intro */
 	.animate .bounceText {
-		animation: bounceintro 5s linear forwards;
+		animation: bounceintro 4s linear forwards;
 		animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
 	}
 
