@@ -666,7 +666,7 @@ a:active {
 }
 
 @media (min-width: $width-medium2) {
-	.image-bg {
+	.move-image-bg {
 		animation: bgMove 5s linear;
 	}
 
@@ -942,7 +942,7 @@ a:active {
 }
 .cv [role="main"] {
 	background: #ffffff;
-	height: 1167px;
+	height: 890px;
 	padding: 0;
 	overflow: auto;
 }
