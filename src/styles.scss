@@ -181,20 +181,18 @@ body {
 	line-height: 1.6;
 	margin: 0;
 	overflow: hidden;
-
-	&.page {
-		p {
-			@media only screen and (min-width: $width-large) {
-				font-size: 18px;
-				font-size: 1.8rem;
-			}
-		}
-	}
 }
 
 .coreContainer {
 	&.page {
+		display: flex;
+		justify-content: center;
+		height: 100vh;
+		.main {
+			max-width: 200ch;
+		}
 		p {
+			max-width: 100ch;
 			@media only screen and (min-width: $width-large) {
 				font-size: 18px;
 				font-size: 1.8rem;
@@ -211,7 +209,6 @@ body {
 
 	@media (min-width: $width-medium) {
 		background-image: url("/images/flowers3.png");
-		background-size: contain;
 		background-repeat: repeat-x;
 		background-position-y: bottom;
 	}
@@ -829,7 +826,7 @@ a:active {
 }
 
 .bio {
-	padding: 12rem 0 0;
+	padding: 6rem 0 0;
 	overflow-y: initial;
 
 	@media (min-width: $width-medium2) {
@@ -881,6 +878,19 @@ a:active {
 	}
 
 	.bio-content {
+		// container-type: inline-size;
+		// margin-inline: auto;
+		// max-width: 100ch;
+		// column-width: 40ch;
+		// column-gap: 3rem;
+		// column-rule: 0.5px solid #98838f;
+
+		h1 {
+			font-size: clamp(5.6526rem, 5.4068rem + 1.2288cqi, 6.3592rem);
+			padding-left: 26rem;
+			margin-bottom: 3rem;
+		}
+
 		position: relative;
 		padding: 0 2rem 8rem 10rem;
 		z-index: 2;
@@ -888,7 +898,7 @@ a:active {
 		animation-timing-function: ease-in;
 
 		@media (min-width: $width-medium) {
-			padding-left: 18rem;
+			padding-left: 0rem;
 			padding-bottom: 2rem;
 		}
 
