@@ -35,30 +35,24 @@ const title = "Designing Stories";
 	}
 
 	.nav-top {
-		display: none;
-		@media (min-width: 960px) {
-			background-color: transparent;
-			display: flex;
-			justify-content: flex-end;
-			align-items: center;
-			width: auto;
-			position: absolute;
-			top: 0;
-			right: 4%;
-			z-index: 2;
-		}
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		background-color: transparent;
+		width: auto;
+		position: fixed;
+		top: 2rem;
+		left: 0;
+		z-index: 2;
+
 		a {
 			display: block;
-			padding: 2rem;
+			padding: 2rem 1rem;
 		}
 
 		.nav-dslogo {
-			display: none;
-
-			@media (min-width: 960px) {
-				display: block;
-				width: 10rem;
-			}
+			display: block;
+			width: 8rem;
 		}
 
 		/* .hero-dslogo {

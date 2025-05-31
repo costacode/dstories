@@ -211,6 +211,8 @@ body {
 		}
 
 		&.cv {
+			height: 100vh;
+
 			.nav-top {
 				z-index: 2;
 			}
@@ -218,7 +220,21 @@ body {
 				border-radius: 14px;
 				max-width: 100ch;
 				margin-top: 3rem;
+				margin-left: 10rem;
+				margin-right: 2rem;
 				z-index: 1;
+
+				@media only screen and (min-width: $width-large) {
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+		}
+
+		.arrow {
+			display: none;
+			@media only screen and (min-width: $width-xxlarge2) {
+				display: block;
 			}
 		}
 	}
@@ -413,7 +429,7 @@ a:active {
 	.arrow {
 		display: none;
 
-		@media (min-width: 960px) {
+		@media (min-width: 1024px) {
 			display: block;
 			grid-column: 4/6;
 			grid-row: 1/2;
@@ -958,7 +974,7 @@ a:active {
 	margin: 0 0 1em;
 }
 .cv .content {
-	padding: 0;
+	padding: 0 1rem;
 }
 .cv h1 {
 	font-size: 30.559px;

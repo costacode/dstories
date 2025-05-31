@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
-import NavMobile from "../components/NavMobile.astro";
+// import NavMobile from "../components/NavMobile.astro";
 ---
 
 <Layout>
+	<Nav />
+
 	<div class="coreContainer animateBG animate image-bg page">
-		<Nav />
 		<main class="main">
 			<article class="bio">
 				<div class="bio-content">
@@ -47,7 +48,7 @@ import NavMobile from "../components/NavMobile.astro";
 					</p>
 				</div>
 			</article>
+			<!-- <NavMobile /> -->
 		</main>
-		<NavMobile />
 	</div>
 </Layout>
