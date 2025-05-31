@@ -100,7 +100,6 @@ ol[role="list"] {
 	padding: 0;
 }
 
-
 /* Set shorter line heights on headings and interactive elements */
 h1,
 h2,
@@ -161,7 +160,6 @@ textarea:not([rows]) {
 }
 /* end reset ^ */
 
-
 /* GLOBALS */
 
 html {
@@ -192,17 +190,16 @@ body {
 			}
 		}
 	}
-
 }
 
 .image-bg {
-	background-image: url('/images/flowers-s.png');
-    background-size: 70%;
-    background-repeat: repeat-x;
+	background-image: url("/images/flowers-s.png");
+	background-size: 70%;
+	background-repeat: repeat-x;
 	background-position-y: bottom;
 
 	@media (min-width: $width-medium) {
-		background-image: url('/images/flowers3.png');
+		background-image: url("/images/flowers3.png");
 		background-size: contain;
 		background-repeat: repeat-x;
 		background-position-y: bottom;
@@ -255,9 +252,6 @@ a:active {
 .print-only {
 	display: none;
 }
-
-
-
 
 /* Hero */
 .hero {
@@ -413,7 +407,6 @@ a:active {
 	align-items: center;
 }
 
-
 /* ANIMATION */
 
 @media (min-width: $width-large) {
@@ -554,16 +547,14 @@ a:active {
 		animation: hero-slide-in 1.2s cubic-bezier(0.5, 0, 0.5, 1.2) forwards;
 	}
 
-
 	@keyframes hero-slide-in {
-	from {
-		transform: translate3d(24%, 0, 0);
+		from {
+			transform: translate3d(24%, 0, 0);
+		}
+		to {
+			transform: translate3d(0, 0, 0);
+		}
 	}
-	to {
-		transform: translate3d(0, 0, 0);
-	}
-	}
-
 
 	/* animate intro */
 	.animate .bounceText {
@@ -624,7 +615,6 @@ a:active {
 		animation-fill-mode: forwards;
 	}
 
-
 	@keyframes blurIn {
 		from {
 			backdrop-filter: blur(30px);
@@ -653,7 +643,6 @@ a:active {
 		to {
 			backdrop-filter: blur(0px);
 		}
-
 	}
 }
 
@@ -663,7 +652,7 @@ a:active {
 	}
 
 	@keyframes bgMove {
-		from { 
+		from {
 			background-position-y: 90rem;
 		}
 		to {
@@ -671,7 +660,6 @@ a:active {
 		}
 	}
 }
-
 
 /* ARROW */
 
@@ -781,8 +769,6 @@ a:active {
 	margin-top: 25%;
 } */
 
-
-
 .lottie-container {
 	display: none;
 	width: 1280px;
@@ -791,7 +777,7 @@ a:active {
 	top: -62rem;
 	right: 0;
 
-  @media (min-width: $width-large) {
-	display: block;
-  }
+	@media (min-width: $width-large) {
+		display: block;
+	}
 }

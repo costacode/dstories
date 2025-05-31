@@ -1,38 +1,41 @@
 ---
-import Icon from '../components/icon.astro';
-const title = 'Designing Stories';
+import Icon from "../components/icon.astro";
+const title = "Designing Stories";
 ---
 
 <section class="hero">
-    <div class="hero-dslogo">
-        <Icon icon="logo" />
-    </div>
-    <header>
-        <h1 class="visually-hidden">{title}</h1>
-        <p class="hero-intro bounceText">A space cultivated<br /> 
-            by <a href="/about/" id="link-about" class="link-about">Jesus Acosta</a></p>
-    </header>
+	<div class="hero-dslogo">
+		<Icon icon="logo" />
+	</div>
+	<header>
+		<h1 class="visually-hidden">{title}</h1>
+
+		<p class="hero-intro bounceText">
+			A space cultivated<br />
+			by <a href="/about/" id="link-about" class="link-about">Jesus Acosta</a>
+		</p>
+	</header>
 </section>
-<div class='js-lottie lottie-container' id='lottie-container'></div>
+<div class="js-lottie lottie-container" id="lottie-container"></div>
 
-<script>
-    import lottie from "lottie-web";
-    fetch('/images/talltree.json')
-        .then(res => res.json())
-        .then(tree => {
-            lottie.loadAnimation({
-                container: document.getElementById('lottie-container'),
-                renderer: "svg",
-                loop: false,
-                autoplay: true,
-                animationData: tree,
-            });
-        });
+<script type="module" is:inline>
+	import lottie from "lottie-web";
+	fetch("/images/talltree.json")
+		.then((res) => res.json())
+		.then((tree) => {
+			lottie.loadAnimation({
+				container: document.getElementById("lottie-container"),
+				renderer: "svg",
+				loop: false,
+				autoplay: true,
+				animationData: tree,
+			});
+		});
 
-    setTimeout(() => {
-        const heroElement = document.querySelector('.hero');
-        if (heroElement) {
-            heroElement.classList.add('slide-in');
-        }
-    }, 3000);
+	setTimeout(() => {
+		const heroElement = document.querySelector(".hero");
+		if (heroElement) {
+			heroElement.classList.add("slide-in");
+		}
+	}, 3000);
 </script>

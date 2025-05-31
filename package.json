@@ -1,22 +1,22 @@
 {
-  "name": "dstories",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "format": "prettier --write '**/*.{js,ts,css,html}'",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^5.8.0",
-    "lottie-web": "^5.13.0"
-  },
-  "devDependencies": {
-    "node-html-parser": "^7.0.1",
-    "prettier": "^3.5.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "sass": "^1.89.0"
-  }
+	"name": "dstories",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"format": "prettier --write '**/*.{js,ts,css,html,astro}'",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"astro": "^5.8.0",
+		"lottie-web": "^5.13.0"
+	},
+	"devDependencies": {
+		"node-html-parser": "^7.0.1",
+		"prettier": "^3.5.3",
+		"prettier-plugin-astro": "^0.14.1",
+		"sass": "^1.89.0"
+	}
 }

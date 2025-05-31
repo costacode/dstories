@@ -1,31 +1,31 @@
 ---
-import { parse } from 'node-html-parser';
+import { parse } from "node-html-parser";
 export interface Props {
-  icon: string;
+	icon: string;
 }
 
-const files = import.meta.glob('/src/svg/**/*.svg', { query: '?raw', import: 'default' });
+const files = import.meta.glob("/src/svg/**/*.svg", { query: "?raw", import: "default" });
 
 async function getSVG(name: string) {
-  const filepath = `/src/svg/${name}.svg`;
+	const filepath = `/src/svg/${name}.svg`;
 
-  if (!(filepath in files)) {
-    throw new Error(`${filepath} not found`);
-  }
+	if (!(filepath in files)) {
+		throw new Error(`${filepath} not found`);
+	}
 
-  const raw = await files[filepath]();
-  const root = parse(raw as string);
+	const raw = await files[filepath]();
+	const root = parse(raw as string);
 
-  const svg = root.querySelector('svg');
-  if (!svg) {
-    throw new Error(`No <svg> element found in ${filepath}`);
-  }
-  const { attributes, innerHTML } = svg;
+	const svg = root.querySelector("svg");
+	if (!svg) {
+		throw new Error(`No <svg> element found in ${filepath}`);
+	}
+	const { attributes, innerHTML } = svg;
 
-  return {
-    attributes,
-    innerHTML,
-  };
+	return {
+		attributes,
+		innerHTML,
+	};
 }
 
 const { icon, ...attributes } = Astro.props as Props;
@@ -34,7 +34,4 @@ const { attributes: baseAttributes, innerHTML } = await getSVG(icon);
 const svgAttributes = { ...baseAttributes, ...attributes };
 ---
 
-<svg
-  {...svgAttributes}
-  set:html={innerHTML}
-></svg>
+<svg {...svgAttributes} set:html={innerHTML} />

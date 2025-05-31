@@ -1,76 +1,75 @@
 ---
-import Icon from '../components/icon.astro';
-const title = 'Designing Stories';
+import Icon from "../components/icon.astro";
+const title = "Designing Stories";
 ---
 
 <nav class="nav-top">
-    <ul>
-        <li>
-            <a href="/">
-                <div class="nav-dslogo">
-                    <Icon icon="logo" />
-                </div>                        
-            </a>
-        </li>
-        <li>
-            <a href="/">Bio</a>
-        </li>
-    </ul>
+	<ul>
+		<li>
+			<a href="/">
+				<div class="nav-dslogo">
+					<Icon icon="logo" />
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="/">Bio</a>
+		</li>
+	</ul>
 </nav>
 
-
 <style>
-    /* styles inside components are scoped */
+	/* styles inside components are scoped */
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
 
-    a {
-        text-decoration: none;
-        color: currentColor;
+	a {
+		text-decoration: none;
+		color: currentColor;
 
-        &:hover,
-        &:focus-visible {
-            color: var(--clr-blue-700);
-        } 
-    }
+		&:hover,
+		&:focus-visible {
+			color: var(--clr-blue-700);
+		}
+	}
 
-    .nav-top {
-        display: none;
-        @media (min-width: 960px) {
-            background-color: transparent;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            width: auto;
-            position: absolute;
-            top: 0;
-            right: 4%;
-            z-index: 2;
-        }
-        a {
-            display: block;
-            padding: 2rem;
-        }
+	.nav-top {
+		display: none;
+		@media (min-width: 960px) {
+			background-color: transparent;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			width: auto;
+			position: absolute;
+			top: 0;
+			right: 4%;
+			z-index: 2;
+		}
+		a {
+			display: block;
+			padding: 2rem;
+		}
 
-        .nav-dslogo {
-            display: none;
+		.nav-dslogo {
+			display: none;
 
-            @media (min-width: 960px) {
-                display: block;
-                width: 10rem;
-            }
-        }
+			@media (min-width: 960px) {
+				display: block;
+				width: 10rem;
+			}
+		}
 
-        /* .hero-dslogo {
+		/* .hero-dslogo {
             width: 116px;
         } */
-    }
+	}
 
-    /* .nav {    
+	/* .nav {    
         background-color: transparent;
         display: flex;
         justify-content: center;
@@ -107,5 +106,4 @@ const title = 'Designing Stories';
             }
         }
     } */
-
 </style>

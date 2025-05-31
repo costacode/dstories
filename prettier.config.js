@@ -6,4 +6,13 @@ export default {
 	useTabs: true,
 	trailingComma: "es5",
 	endOfLine: "auto",
+	plugins: ["prettier-plugin-astro"],
+	overrides: [
+		{
+			files: "*.astro",
+			options: {
+				parser: "astro",
+			},
+		},
+	],
 };
