@@ -193,9 +193,16 @@ body {
 
 		p {
 			max-width: 100ch;
-			@media only screen and (min-width: $width-large) {
-				font-size: 18px;
-				font-size: 1.8rem;
+		}
+
+		.bio {
+			p {
+				@media only screen and (min-width: $width-medium) {
+					font-size: 2rem;
+				}
+				@media only screen and (min-width: $width-xxlarge2) {
+					font-size: 3rem;
+				}
 			}
 		}
 
@@ -862,7 +869,7 @@ a:active {
 
 		@media (min-width: $width-small) {
 			float: left;
-			margin: 2rem 2rem 2rem 0;
+			margin: 2rem 4rem 2rem 0;
 		}
 
 		@media (min-width: $width-medium) {
@@ -895,6 +902,7 @@ a:active {
 		h1 {
 			font-size: clamp(5.6526rem, 5.4068rem + 1.2288cqi, 6.3592rem);
 			padding-left: 26rem;
+			margin-top: 1rem;
 			margin-bottom: 3rem;
 		}
 
