@@ -179,14 +179,17 @@ body {
 	min-height: 100vh;
 	line-height: 1.6;
 	margin: 0;
-	overflow: hidden;
 }
 
 .coreContainer {
 	&.page {
 		display: flex;
-		justify-content: center;
-		height: 100vh;
+
+		@media (min-width: $width-medium) {
+			justify-content: center;
+			height: 100vh;
+		}
+
 		.main {
 			max-width: 200ch;
 		}
@@ -199,6 +202,7 @@ body {
 			p {
 				@media only screen and (min-width: $width-medium) {
 					font-size: 2rem;
+					padding-left: 26rem;
 				}
 				@media only screen and (min-width: $width-xxlarge2) {
 					font-size: 3rem;
@@ -892,25 +896,11 @@ a:active {
 	}
 
 	.bio-content {
-		// container-type: inline-size;
-		// margin-inline: auto;
-		// max-width: 100ch;
-		// column-width: 40ch;
-		// column-gap: 3rem;
-		// column-rule: 0.5px solid #98838f;
-
-		h1 {
-			font-size: clamp(5.6526rem, 5.4068rem + 1.2288cqi, 6.3592rem);
-			padding-left: 26rem;
-			margin-top: 1rem;
-			margin-bottom: 3rem;
-		}
-
 		position: relative;
 		padding: 0 2rem 8rem 10rem;
+		padding-bottom: 18rem;
 		z-index: 2;
-		animation: fade 1s linear forwards;
-		animation-timing-function: ease-in;
+		animation: fade 1s ease-in forwards;
 
 		@media (min-width: $width-medium) {
 			padding-left: 0rem;
@@ -919,6 +909,16 @@ a:active {
 
 		@media (min-width: $width-medium2) {
 			padding-right: 0;
+		}
+
+		h1 {
+			font-size: clamp(5.6526rem, 5.4068rem + 1.2288cqi, 6.3592rem);
+			margin-top: 1rem;
+			margin-bottom: 3rem;
+
+			@media (min-width: $width-medium2) {
+				padding-left: 26rem;
+			}
 		}
 
 		@keyframes fade {
@@ -1111,5 +1111,45 @@ hr.cv-divider {
 	color: #7d7d72;
 	b {
 		display: none;
+	}
+}
+
+// NAV MOBILE
+
+.nav-mobile {
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	padding: 0;
+	position: absolute;
+	bottom: 0;
+	z-index: 4;
+
+	@media (min-width: $width-small) {
+		display: none;
+	}
+
+	&.hidden {
+		display: none;
+	}
+
+	a {
+		color: black;
+		display: block;
+		padding: 2rem;
+
+		&:hover {
+			color: green;
+		}
+	}
+
+	.nav-dslogo {
+		width: 6rem;
+
+		@media (min-width: $width-small) {
+			width: 10rem;
+		}
 	}
 }

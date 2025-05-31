@@ -1,0 +1,34 @@
+---
+import Icon from "../components/icon.astro";
+---
+
+<nav class="nav-mobile">
+	<ul>
+		<li>
+			<a href="/">
+				<div class="nav-dslogo">
+					<Icon icon="logo" />
+				</div>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+<script>
+	const mainContent = document.querySelector(".main");
+
+	if (!mainContent) {
+		return;
+	}
+
+	let pos = window.pageYOffset || mainContent.scrollTop;
+	let visible = true;
+
+	const handleScroll = () => {
+		const currentPos = window.pageYOffset || mainContent.scrollTop;
+		visible = currentPos > pos;
+		pos = currentPos;
+	};
+
+	mainContent.addEventListener("scroll", handleScroll);
+</script>
