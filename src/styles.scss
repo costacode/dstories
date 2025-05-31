@@ -124,7 +124,6 @@ h4 {
 p,
 li {
 	text-wrap: pretty;
-	max-width: 65ch;
 }
 
 /* A elements that don't have a class get default styles */
@@ -191,11 +190,24 @@ body {
 		.main {
 			max-width: 200ch;
 		}
+
 		p {
 			max-width: 100ch;
 			@media only screen and (min-width: $width-large) {
 				font-size: 18px;
 				font-size: 1.8rem;
+			}
+		}
+
+		&.cv {
+			.nav-top {
+				z-index: 2;
+			}
+			.main {
+				border-radius: 14px;
+				max-width: 116ch;
+				margin-top: 3rem;
+				z-index: 1;
 			}
 		}
 	}
@@ -670,10 +682,12 @@ a:active {
 
 /* ARROW */
 
-/* .arrow {
+.arrow {
 	-ms-touch-action: none;
 	touch-action: none;
-	transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+	transition:
+		transform 0.4s ease-in-out,
+		opacity 0.2s ease-in-out;
 	z-index: 1;
 
 	&:hover {
@@ -716,14 +730,7 @@ a:active {
 
 .clipboard {
 	color: white;
-	-webkit-clip-path: polygon(
-		62% 0%,
-		100% 62%,
-		62% 100%,
-		0% 100%,
-		38% 62%,
-		0% 0%
-	);
+	-webkit-clip-path: polygon(62% 0%, 100% 62%, 62% 100%, 0% 100%, 38% 62%, 0% 0%);
 	clip-path: polygon(62% 0%, 100% 62%, 62% 100%, 0% 100%, 38% 62%, 0% 0%);
 }
 
@@ -731,7 +738,7 @@ a:active {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	background-color: transparent;
+	background-color: #2c91c3;
 	clip-path: polygon(62% 0%, 100% 62%, 62% 100%, 0% 100%, 38% 62%, 0% 0%);
 	font-size: 2rem;
 	position: relative;
@@ -757,7 +764,7 @@ a:active {
 		max-width: 168px;
 		line-height: 1.4;
 	}
-	
+
 	ul {
 		position: relative;
 		top: 10%;
@@ -774,7 +781,7 @@ a:active {
 	color: white;
 	opacity: 0;
 	margin-top: 25%;
-} */
+}
 
 .lottie-container {
 	display: none;
@@ -920,5 +927,181 @@ a:active {
 				opacity: 1;
 			}
 		}
+	}
+}
+
+/* cv */
+.cv {
+	p,
+	li {
+		max-width: auto;
+	}
+	@media only screen and (min-width: 768px) {
+		border: 8px solid #e3e3e3;
+	}
+}
+.cv [role="main"] {
+	background: #ffffff;
+	height: 1167px;
+	padding: 0;
+	overflow: auto;
+}
+.cv p {
+	margin: 0 0 1em;
+}
+.cv .content {
+	padding: 0;
+}
+.cv h1 {
+	font-size: 30.559px;
+	font-size: 3rem;
+	line-height: 1.049;
+	font-weight: 300;
+}
+.cv h2 {
+	font-size: 5.09em;
+	font-weight: normal;
+	padding: 37.774px 0 18.887px;
+}
+h2.title-cv {
+	margin: 0;
+	line-height: 1.1;
+	margin-bottom: 18.887px;
+}
+.cv .top {
+	padding: 2% 0;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.cv .introbox {
+	padding: 0;
+	width: 100%;
+	text-align: center;
+
+	span,
+	a {
+		font-weight: bold;
+	}
+}
+.cv .bodybox {
+	padding: 0 5%;
+}
+.services.cv [role="main"] {
+	float: none;
+	margin: 0 auto;
+	padding: 0 0 37.774px;
+}
+.cvitems dt {
+	display: block;
+	width: 100%;
+}
+.cvitems dd {
+	margin: 0 0 1em;
+	display: block;
+	width: 100%;
+}
+.cv dd ul {
+	list-style: disc;
+	&.project-list {
+		list-style: none;
+	}
+}
+dl.cvitems dt {
+	margin: 0;
+	font-weight: bold;
+	text-transform: uppercase;
+	position: relative;
+}
+h1.cvitems-general {
+	text-transform: uppercase;
+}
+dl.cvitems-general h1 {
+	margin-top: 0;
+}
+dl.cvitems dd {
+	border-bottom: 1px solid #e3e3e3;
+	padding-bottom: 18.887px;
+}
+dl.cvitems dd:last-child {
+	border-bottom: none;
+}
+dl.cvitems-general dd {
+	border-bottom: none;
+}
+span.subitem,
+span.subitem-b,
+span.subitem-blink {
+	color: #4d4d4d;
+	display: block;
+	font-size: 14px;
+	padding: 0 0 0.2em;
+}
+span.subitem-ex {
+	padding-bottom: 1em;
+}
+span.subitem-b {
+	padding: 0.8em 0 0;
+}
+span.subitem-blink {
+	padding-top: 0;
+}
+.cvitems-specific ul {
+	list-style: none;
+}
+.cvitems-specific ul li {
+	margin: 0.2em 0;
+}
+hr.cv-divider {
+	border-width: 1px;
+	display: block;
+	height: 1px;
+	margin: 2em 0 1.5em;
+	padding: 0;
+}
+
+@media only screen and (min-width: $width-medium2) {
+	/* cv */
+	.cv h2 {
+		width: 100%;
+	}
+	.cv [role="main"] {
+		width: 100%;
+	}
+	dl.cvitems-general h1 {
+		position: absolute;
+		top: 0;
+	}
+	.cv dt {
+		display: inline-table;
+		width: 25%;
+		line-height: 1.2;
+		vertical-align: top;
+	}
+	.cv dd {
+		margin: 0 0 1em;
+		display: inline-table;
+		width: 70%;
+	}
+	.cvitems dt {
+		width: 23%;
+		padding-right: 2%;
+	}
+	.cv .bodybox {
+		padding: 0 5%;
+	}
+}
+
+.project-date {
+	display: block;
+	margin-top: 16px;
+	padding-top: 6px;
+	border-top: 1px solid #7d7d72;
+	text-transform: lowercase;
+	font-weight: normal;
+	font-size: 16px;
+	color: #7d7d72;
+	b {
+		display: none;
 	}
 }
