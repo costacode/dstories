@@ -989,15 +989,16 @@ a:active {
 
 	.bio-content {
 		position: relative;
-		padding: 8rem 4rem 8rem 4rem;
+		padding: 8rem 4rem 48rem;
 		padding-bottom: 18rem;
 		overflow: auto;
-		max-height: 900px;
+		height: 600px;
 		z-index: 2;
 
 		@media (min-width: $width-medium) {
 			padding-left: 14rem;
 			padding-bottom: 2rem;
+			height: auto;
 			animation: fade 3s linear forwards;
 			animation-timing-function: ease-in;
 		}
