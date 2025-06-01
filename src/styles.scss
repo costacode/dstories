@@ -314,6 +314,10 @@ body {
 	visibility: visible !important;
 }
 
+.bold {
+	font-weight: var(--ff-bold);
+}
+
 ul,
 ol {
 	margin: 0 0 0 0;
