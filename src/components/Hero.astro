@@ -42,9 +42,17 @@ const title = "Designing Stories";
 
 <script type="module" is:inline>
 	setTimeout(() => {
-		const heroElement = document.querySelector(".hero");
-		if (heroElement) {
-			heroElement.classList.add("animate");
+		const heroContainer = document.querySelector(".coreContainer");
+		const logoElement = document.querySelector(".hero-dslogo");
+		const bounceText = document.querySelector(".bounceText");
+		if (heroContainer) {
+			heroContainer.classList.add("animate");
 		}
-	}, 100); // Short delay to ensure DOM is ready
+		if (logoElement) {
+			logoElement.classList.add("visible");
+		}
+		if (bounceText) {
+			bounceText.classList.add("visible");
+		}
+	}, 1000); // Short delay to ensure DOM is ready
 </script>

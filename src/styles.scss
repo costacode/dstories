@@ -304,6 +304,10 @@ body {
 	white-space: nowrap;
 }
 
+.visible {
+	visibility: visible !important;
+}
+
 ul,
 ol {
 	margin: 0 0 0 0;
@@ -591,8 +595,7 @@ a:active {
 
 	/* animate logo size */
 	.hero-dslogo {
-		transform: scale(1.2);
-		transition: transform 0.5s;
+		visibility: hidden;
 	}
 
 	.animate .hero-dslogo {
@@ -648,6 +651,10 @@ a:active {
 	}
 
 	/* animate intro */
+	.bounceText {
+		visibility: hidden;
+	}
+
 	.animate .bounceText {
 		animation: bounceintro 4s linear forwards;
 		animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
