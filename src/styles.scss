@@ -167,12 +167,13 @@ html {
 	-webkit-tap-highlight-color: #c3d9e6;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
-	background-color: var(--clr-green-400);
 	font-size: 62.5%;
 }
 
 body {
 	color: var(--clr-body);
+	background-color: var(--clr-green-400);
+
 	font-family: var(--ff-base);
 	font-weight: var(--ff-regular);
 	font-size: 1.6rem;
@@ -213,6 +214,9 @@ body {
 }
 
 .coreContainer {
+	height: 100vh;
+	overflow: hidden;
+
 	&.page {
 		display: flex;
 
@@ -248,6 +252,7 @@ body {
 
 		&.cv {
 			height: 100vh;
+			overflow: visible;
 
 			.nav-top {
 				z-index: 2;
@@ -285,12 +290,14 @@ body {
 	background-size: 40%;
 	background-repeat: repeat-x;
 	background-position-y: bottom;
+	background-color: transparent;
 
 	@media (min-width: $width-medium) {
 		background-image: url("/images/flowers3.png");
 		background-repeat: repeat-x;
 		background-size: 70%;
 		background-position-y: bottom;
+		background-color: transparent;
 	}
 }
 
@@ -575,9 +582,8 @@ a:active {
 	}
 
 	/* animate body background */
-	.animate.animateBg {
-		animation: bgContainer 5.6s linear forwards;
-		animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+	body:has(.hero) {
+		animation: bgContainer 5.6s cubic-bezier(0.5, 0, 0.5, 1) forwards;
 	}
 
 	@keyframes bgContainer {
