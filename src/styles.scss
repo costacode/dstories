@@ -172,8 +172,7 @@ html {
 
 body {
 	color: var(--clr-body);
-	// background-color: var(--clr-green-400);
-
+	background-color: var(--clr-green-400);
 	font-family: var(--ff-base);
 	font-weight: var(--ff-regular);
 	font-size: 1.6rem;
@@ -240,7 +239,7 @@ body {
 					padding-left: 26rem;
 				}
 				@media only screen and (min-width: $width-xxlarge2) {
-					font-size: 3rem;
+					font-size: 2.4rem;
 				}
 			}
 		}
@@ -583,15 +582,16 @@ a:active {
 
 	/* animate body background */
 	body:has(.hero) {
+		background-color: white;
 		animation: bgContainer 5.6s cubic-bezier(0.5, 0, 0.5, 1) forwards;
 	}
 
 	@keyframes bgContainer {
 		from {
-			background-color: transparent;
+			background-color: white;
 		}
 		38% {
-			background-color: transparent;
+			background-color: white;
 		}
 		45% {
 			background-color: #c7dd3b;
@@ -659,7 +659,7 @@ a:active {
 	}
 
 	/* animate intro */
-	.bounceText {
+	.hero-intro {
 		visibility: hidden;
 	}
 
@@ -978,11 +978,12 @@ a:active {
 		overflow: auto;
 		max-height: 1200px;
 		z-index: 2;
-		animation: fade 1s ease-in forwards;
 
 		@media (min-width: $width-medium) {
 			padding-left: 14rem;
 			padding-bottom: 2rem;
+			animation: fade 3s linear forwards;
+			animation-timing-function: ease-in;
 		}
 
 		@media (min-width: $width-medium2) {
@@ -1027,6 +1028,14 @@ a:active {
 		border: 8px solid #e3e3e3;
 	}
 }
+
+.main.is-cv {
+	@media (min-width: $width-medium) {
+		animation: fade 2s linear forwards;
+		animation-timing-function: ease-in;
+	}
+}
+
 .cv [role="main"] {
 	background: #ffffff;
 	height: 890px;
