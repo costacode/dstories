@@ -590,9 +590,13 @@ a:active {
 	}
 
 	/* animate logo size */
+	.hero-dslogo {
+		transform: scale(1.2);
+		transition: transform 0.5s;
+	}
+
 	.animate .hero-dslogo {
-		animation: logosize 2s linear forwards;
-		animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+		animation: logosize 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 	}
 
 	@media (min-width: $width-medium2) {

@@ -39,3 +39,12 @@ const title = "Designing Stories";
 		}
 	}, 3000);
 </script>
+
+<script type="module" is:inline>
+	setTimeout(() => {
+		const heroElement = document.querySelector(".hero");
+		if (heroElement) {
+			heroElement.classList.add("animate");
+		}
+	}, 100); // Short delay to ensure DOM is ready
+</script>
