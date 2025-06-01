@@ -581,7 +581,7 @@ a:active {
 	}
 
 	/* animate body background */
-	body:has(.hero) {
+	body {
 		background-color: white;
 		animation: bgContainer 5.6s cubic-bezier(0.5, 0, 0.5, 1) forwards;
 	}
