@@ -2,16 +2,44 @@
 import "../styles.scss";
 import Nav from "../components/Nav.astro";
 const { title = "Designing Stories" } = Astro.props;
+const description =
+	"Web design space run by Jesus Sergio Acosta, creative front-end developer.  I code user interface components with HTML, CSS and JavaScript.";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+
 		<title>{title}</title>
-	</head>
+		<meta name="description" content={description} />
+		<meta name="author" content="Jesus Acosta | Designing Stories" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+		<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#c7dd3b" />
+		<link rel="shortcut icon" href="/favicons/favicon.ico" />
+		<meta name="apple-mobile-web-app-title" content="Designing Stories" />
+		<meta name="application-name" content="Designing Stories" />
+		<meta name="msapplication-TileColor" content="#c7dd3b" />
+		<meta name="msapplication-config" content="/favicons/browserconfig.xml" />
+
+		<link rel="canonical" href="https://www.designingstories.com" />
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ8HD1V0V3"></script></head
+	>
+
+	<!-- Google tag (gtag.js) -->
+
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-PZ8HD1V0V3");
+	</script>
+
 	<body>
 		<!-- <Nav /> -->
 		<slot />
