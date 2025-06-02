@@ -1014,8 +1014,8 @@ a:active {
 		position: relative;
 		padding: 8rem 4rem 48rem;
 		padding-bottom: 18rem;
-		overflow: auto;
-		height: 690px;
+		overflow-y: auto;
+		max-height: 90vh;
 		z-index: 2;
 
 		@media (min-width: $width-medium) {
@@ -1024,12 +1024,10 @@ a:active {
 			padding-bottom: 2rem;
 			animation: fade 3s linear forwards;
 			animation-timing-function: ease-in;
-			height: 990px;
 		}
 
 		@media (min-width: $width-large) {
 			padding-right: 0;
-			height: auto;
 		}
 
 		h1 {
@@ -1089,7 +1087,7 @@ a:active {
 	margin: 0 0 1em;
 }
 .cv .content {
-	height: 990px;
+	max-height: 120vh;
 	overflow-y: auto;
 	overflow-x: hidden;
 	padding: 0 1rem;
@@ -1097,6 +1095,11 @@ a:active {
 
 	@media (min-width: $width-medium) {
 		padding-bottom: 0;
+		max-height: 78vh;
+	}
+
+	@media (min-width: $width-medium2) {
+		max-height: 80vh;
 	}
 }
 .cv h1 {
