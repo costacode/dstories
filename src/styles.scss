@@ -34,6 +34,8 @@
 	--clr-blue-700: hsl(200, 63%, 47%);
 	--clr-black-800: hsl(180, 14%, 1%);
 
+	--clr-white-rgba-80: rgba(255, 255, 255, 0.8);
+
 	--clr-body: var(--clr-neutral-400);
 	--clr-heading: var(--clr-neutral-900);
 	--clr-accent-400: var(--clr-green-400);
@@ -212,16 +214,18 @@ body {
 		padding: 1.2rem 1rem;
 
 		@media (min-width: $width-medium) {
-			padding: 1.8rem 2.4rem;
+			padding: 1rem 2.4rem;
 		}
 	}
 
 	li.active a {
-		font-weight: var(--clr-green-400);
 		font-weight: var(--ff-bold);
-		background-color: white;
+		background-color: var(--clr-blue-500-tr);
 		backdrop-filter: blur(16px) saturate(180%);
 		-webkit-backdrop-filter: blur(16px) saturate(180%);
+		box-shadow: 0 4px 0px rgba(255, 255, 255, 0.48);
+		border-radius: 1rem 4rem 4rem 4rem;
+		border: 1px solid black;
 		border-radius: 1rem 4rem 4rem 4rem;
 	}
 
