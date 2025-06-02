@@ -1181,10 +1181,12 @@ span.subitem-blink {
 .cvitems-specific ul li {
 	margin: 0.2em 0;
 }
+
 hr.cv-divider {
-	border-width: 1px;
+	background: url("/images/hr.png") no-repeat scroll 50% 0 / 40px 10px transparent;
+	border-width: 0;
 	display: block;
-	height: 1px;
+	height: 10px;
 	margin: 2em 0 1.5em;
 	padding: 0;
 }
