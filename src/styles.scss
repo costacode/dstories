@@ -211,10 +211,10 @@ body {
 
 	a {
 		display: block;
-		padding: 1.2rem 1rem;
+		padding: 1rem;
 
 		@media (min-width: $width-medium) {
-			padding: 1rem 2.4rem;
+			padding: 1rem 2.4rem 1rem;
 		}
 	}
 
@@ -232,6 +232,7 @@ body {
 	.nav-dslogo {
 		display: block;
 		width: 8rem;
+		padding-top: 0.5rem;
 
 		@media (min-width: $width-large) {
 			width: 10rem;
