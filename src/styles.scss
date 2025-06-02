@@ -1003,7 +1003,8 @@ a:active {
 		z-index: 2;
 
 		@media (min-width: $width-medium) {
-			padding-left: 14rem;
+			padding-top: 2rem;
+			padding-left: 16rem;
 			padding-bottom: 2rem;
 			animation: fade 3s linear forwards;
 			animation-timing-function: ease-in;
@@ -1022,7 +1023,7 @@ a:active {
 			padding-left: 0;
 
 			@media (min-width: $width-medium) {
-				margin-top: 6rem;
+				margin-top: 2rem;
 				padding-left: 26rem;
 			}
 		}
