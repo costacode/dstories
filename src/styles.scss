@@ -620,7 +620,7 @@ a:active {
 	}
 
 	/* animate body background */
-	.image-bg:has(.hero) {
+	body:has(.hero) {
 		animation: bgContainer 5.6s cubic-bezier(0.5, 0, 0.5, 1) forwards;
 	}
 
