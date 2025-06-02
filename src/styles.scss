@@ -546,6 +546,13 @@ a:active {
 }
 
 /* ANIMATION */
+// ojo add var for all colors
+
+body:has(.hero) {
+	@media (max-width: $width-large) {
+		background-color: #c7dd3b;
+	}
+}
 
 @media (min-width: $width-large) {
 	/* animate letters */
