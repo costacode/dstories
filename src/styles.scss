@@ -30,6 +30,7 @@
 	--clr-blue-400: hsl(200, 64%, 85%);
 	--clr-blue-400-tr: hsla(200, 64%, 85%, 0.5);
 	--clr-blue-500: hsl(199, 64%, 92%);
+	--clr-blue-500-tr: hsla(199, 64%, 92%, 0.6);
 	--clr-blue-700: hsl(200, 63%, 47%);
 	--clr-black-800: hsl(180, 14%, 1%);
 
@@ -184,9 +185,12 @@ body {
 }
 
 .nav-top {
-	background-color: var(--clr-blue-500);
+	background-color: var(--clr-blue-500-tr);
+	backdrop-filter: blur(16px) saturate(180%);
+	-webkit-backdrop-filter: blur(16px) saturate(180%);
 	border-top-right-radius: 14px;
 	border-bottom-right-radius: 14px;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 	padding-right: 1rem;
 	width: auto;
 	position: fixed;
@@ -269,14 +273,17 @@ body {
 				border: 20px solid var(--clr-blue-400-tr);
 				border-radius: 14px;
 				max-width: 100ch;
-				margin-top: 2rem;
+				margin-top: 4rem;
 				margin-left: 2rem;
 				margin-right: 2rem;
-				padding: 8rem 2rem 8rem 2rem;
+				margin-bottom: 10rem;
+				padding: 0;
+				padding-bottom: 8rem;
 				z-index: 1;
 
 				@media only screen and (min-width: $width-medium) {
 					margin-left: 14rem;
+					margin-bottom: 16rem;
 				}
 				@media only screen and (min-width: $width-xlarge) {
 					margin-left: 0;
@@ -936,7 +943,8 @@ a:active {
 }
 
 .bio {
-	padding: 2rem 0 0;
+	padding: 0;
+	padding-top: 2rem;
 	overflow-y: initial;
 
 	@media (min-width: $width-medium2) {
@@ -1039,7 +1047,7 @@ a:active {
 .cv {
 	p,
 	li {
-		max-width: auto;
+		width: auto;
 	}
 	@media only screen and (min-width: 768px) {
 		border: 8px solid #e3e3e3;
@@ -1055,15 +1063,23 @@ a:active {
 
 .cv [role="main"] {
 	background: #ffffff;
-	height: 890px;
+	height: auto;
 	padding: 0;
-	overflow: auto;
+	overflow: hidden;
 }
 .cv p {
 	margin: 0 0 1em;
 }
 .cv .content {
+	height: 990px;
+	overflow-y: auto;
+	overflow-x: hidden;
 	padding: 0 1rem;
+	padding-bottom: 50rem;
+
+	@media (min-width: $width-medium) {
+		padding-bottom: 0;
+	}
 }
 .cv h1 {
 	font-size: 30.559px;
@@ -1082,7 +1098,7 @@ h2.title-cv {
 	margin-bottom: 18.887px;
 }
 .cv .top {
-	padding: 2% 0;
+	padding: 6rem 0 2rem;
 	margin: 0;
 	letter-spacing: 1px;
 	text-transform: uppercase;
