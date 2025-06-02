@@ -204,15 +204,25 @@ body {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+		gap: 1rem;
 	}
 
 	a {
 		display: block;
-		padding: 1rem 1rem;
+		padding: 1.2rem 1rem;
 
 		@media (min-width: $width-medium) {
-			padding: 2rem 4rem;
+			padding: 1.8rem 2.4rem;
 		}
+	}
+
+	li.active a {
+		font-weight: var(--clr-green-400);
+		font-weight: var(--ff-bold);
+		background-color: white;
+		backdrop-filter: blur(16px) saturate(180%);
+		-webkit-backdrop-filter: blur(16px) saturate(180%);
+		border-radius: 1rem 4rem 4rem 4rem;
 	}
 
 	.nav-dslogo {
