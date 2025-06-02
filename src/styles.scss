@@ -944,7 +944,6 @@ a:active {
 
 .bio {
 	padding: 0;
-	padding-top: 2rem;
 	overflow-y: initial;
 
 	@media (min-width: $width-medium2) {
@@ -1000,24 +999,25 @@ a:active {
 		padding: 8rem 4rem 48rem;
 		padding-bottom: 18rem;
 		overflow: auto;
-		height: 600px;
+		height: 690px;
 		z-index: 2;
 
 		@media (min-width: $width-medium) {
 			padding-left: 14rem;
 			padding-bottom: 2rem;
-			height: auto;
 			animation: fade 3s linear forwards;
 			animation-timing-function: ease-in;
+			height: 860px;
 		}
 
-		@media (min-width: $width-medium2) {
+		@media (min-width: $width-large) {
 			padding-right: 0;
+			height: auto;
 		}
 
 		h1 {
 			font-size: clamp(5.6526rem, 5.4068rem + 1.2288cqi, 6.3592rem);
-			margin-top: 1rem;
+			margin-top: 2rem;
 			margin-bottom: 3rem;
 			padding-left: 0;
 
