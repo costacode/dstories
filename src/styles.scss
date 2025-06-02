@@ -1021,7 +1021,8 @@ a:active {
 			margin-bottom: 3rem;
 			padding-left: 0;
 
-			@media (min-width: $width-medium2) {
+			@media (min-width: $width-medium) {
+				margin-top: 2rem;
 				padding-left: 26rem;
 			}
 		}
