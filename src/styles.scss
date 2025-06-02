@@ -243,7 +243,6 @@ body {
 .coreContainer {
 	height: 100vh;
 	overflow: hidden;
-	background-color: var(--clr-green-400);
 
 	&.page {
 		display: flex;
@@ -621,8 +620,7 @@ a:active {
 	}
 
 	/* animate body background */
-	.coreContainer:has(.hero) {
-		// background-color: white;
+	.image-bg:has(.hero) {
 		animation: bgContainer 5.6s cubic-bezier(0.5, 0, 0.5, 1) forwards;
 	}
 
@@ -1101,6 +1099,10 @@ a:active {
 
 	@media (min-width: $width-medium2) {
 		max-height: 70vh;
+	}
+
+	@media (min-width: $width-large) {
+		max-height: 82vh;
 	}
 }
 .cv h1 {
