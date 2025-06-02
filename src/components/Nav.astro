@@ -1,24 +1,31 @@
 ---
 import Icon from "../components/icon.astro";
-const title = "Designing Stories";
+// Get the current pathname from Astro's global object
+const { pathname } = Astro.url;
 ---
 
 <nav class="nav-top">
-	<ul>
-		<li>
-			<a href="/">
-				<div class="nav-dslogo">
-					<Icon icon="logo" />
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="/about/"> About </a>
-		</li>
-		<li>
-			<a href="/cv/"> CV </a>
-		</li>
-	</ul>
+    <ul>
+        {pathname !== "/" && (
+            <li>
+                <a href="/">
+                    <div class="nav-dslogo">
+                        <Icon icon="logo" />
+                    </div>
+                </a>
+            </li>
+        )}
+        {pathname !== "/about/" && (
+            <li>
+                <a href="/about/"> About </a>
+            </li>
+        )}
+        {pathname !== "/cv/" && (
+            <li>
+                <a href="/cv/"> CV </a>
+            </li>
+        )}
+    </ul>
 </nav>
 
 <style>
