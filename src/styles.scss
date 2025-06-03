@@ -1029,14 +1029,9 @@ body:has(.hero) {
 		@media (min-width: $width-medium) {
 			padding-top: 2rem;
 			padding-left: 16rem;
-			padding-right: 2rem;
 			padding-bottom: 2rem;
 			animation: fade 3s linear forwards;
 			animation-timing-function: ease-in;
-		}
-
-		@media (min-width: $width-large) {
-			padding-right: 2rem;
 		}
 
 		h1 {
