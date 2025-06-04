@@ -1205,7 +1205,11 @@ span.subitem-blink {
 	padding-top: 0;
 }
 span.stack {
-	width: 50%;
+	margin-top: 1rem;
+	@media only screen and (min-width: $width-medium2) {
+		margin-top: unset;
+		width: 50%;
+	}
 }
 .cvitems-specific ul {
 	list-style: none;
